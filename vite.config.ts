@@ -5,6 +5,6 @@ import { webfontDownload } from 'vite-plugin-webfont-dl'
 
 export default defineConfig({
   // Change this line
-  base: '/my-solid-daisyui-template/',
+  base: '/weather-app/',
   plugins: [solid(), simpleHtmlPlugin({ minify: true }), webfontDownload()]
 })
