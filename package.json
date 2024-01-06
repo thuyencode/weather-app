@@ -11,6 +11,7 @@
     "lint": "bunx eslint ."
   },
   "dependencies": {
+    "iconify-icon": "^1.0.8",
     "solid-js": "^1.8.7"
   },
   "devDependencies": {
