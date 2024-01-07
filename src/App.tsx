@@ -1,9 +1,15 @@
 import { type Component } from 'solid-js'
+import ForecastOfHour from './components/cards/ForecastOfHour'
+import ForecastOfHourSkeleton from './components/cards/ForecastOfHourSkeleton'
 
 const App: Component = () => {
-
   return (
-    <>Weather App</>
+    <>
+      <div class='flex gap-2'>
+        <ForecastOfHour />
+        <ForecastOfHourSkeleton />
+      </div>
+    </>
   )
 }
 
