@@ -11,10 +11,10 @@
     "lint": "bunx eslint ."
   },
   "dependencies": {
-    "iconify-icon": "^1.0.8",
     "solid-js": "^1.8.7"
   },
   "devDependencies": {
+    "@iconify-icon/solid": "^1.0.8",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
     "autoprefixer": "^10.4.16",
