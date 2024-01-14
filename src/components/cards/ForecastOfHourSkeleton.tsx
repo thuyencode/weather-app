@@ -1,18 +1,16 @@
 import { type Component } from 'solid-js'
+import { type WeekDay } from '../../libs/types'
 
-const ForecastOfHourSkeleton: Component = () => {
+interface Props {
+  weekDay: WeekDay
+}
+
+const ForecastOfHourSkeleton: Component<Props> = (props) => {
   return (
-    <div class='card max-w-32 rounded-md border border-base-content/50 bg-base-100 p-2 text-center text-base-content'>
-      <span>10:00 PM</span>
-
-      <div class='skeleton m-5 h-9 w-9 rounded-full' />
-
-      <div class='space-y-2'>
-        <div class='skeleton h-4 w-full' />
-        <div class='skeleton h-4 w-full' />
-      </div>
-
-      <div class='skeleton mt-6 h-5 w-full' />
+    <div class='card h-min max-w-32 rounded-md border border-base-content/50 bg-base-100 p-3 pt-2 text-center text-base-content'>
+      <span class='uppercase'>{props.weekDay}</span>
+      <div class='skeleton my-3 h-10 w-10 rounded-full' />
+      <div class='skeleton mt-1 h-5 w-full' />
     </div>
   )
 }
