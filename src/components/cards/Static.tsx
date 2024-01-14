@@ -11,7 +11,7 @@ const Static: Component = () => {
       <h1>
         <span>18</span>℃
       </h1>
-      <div class='flex flex-col'>
+      <div class='flex flex-col rounded-lg bg-base-200 p-3 dark:bg-base-100'>
         <span>
           Wind: <span class='font-medium'>9 kmph</span>
         </span>

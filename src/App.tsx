@@ -1,15 +1,15 @@
 import { For, type Component } from 'solid-js'
-import ForecastOfHour from './components/cards/ForecastOfHour'
-import Static from './components/cards/Static'
+import ForecastOfHourSkeleton from './components/skeletons/ForecastOfHourSkeleton'
+import StaticSkeleton from './components/skeletons/StaticSkeleton'
 import { WEEK_DAYS } from './libs/constants'
 
 const App: Component = () => {
   return (
     <>
-      <Static />
+      <StaticSkeleton />
       <div class='flex gap-2'>
         <For each={WEEK_DAYS}>
-          {(weekDay) => <ForecastOfHour weekDay={weekDay} />}
+          {(weekDay) => <ForecastOfHourSkeleton weekDay={weekDay} />}
         </For>
       </div>
     </>
