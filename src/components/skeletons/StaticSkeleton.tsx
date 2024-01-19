@@ -10,15 +10,17 @@ const StaticSkeleton: Component = () => {
       <h1>
         <div class='skeleton h-7 w-14 dark:bg-base-200' />
       </h1>
-      <div class='flex flex-col rounded-lg bg-base-200 p-3 dark:bg-base-100'>
+      <div class='flex flex-col'>
         <span class='inline-flex gap-1'>
-          Wind: <span class='skeleton inline-block h-5 w-12' />
+          Wind: <span class='skeleton inline-block h-5 w-12 dark:bg-base-200' />
         </span>
         <span class='inline-flex gap-1'>
-          Precip: <span class='skeleton inline-block h-5 w-12' />
+          Precip:{' '}
+          <span class='skeleton inline-block h-5 w-12 dark:bg-base-200' />
         </span>
         <span class='inline-flex gap-1'>
-          Pressure: <span class='skeleton inline-block h-5 w-12' />
+          Pressure:{' '}
+          <span class='skeleton inline-block h-5 w-12 dark:bg-base-200' />
         </span>
       </div>
     </div>
