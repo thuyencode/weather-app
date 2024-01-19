@@ -11,6 +11,7 @@
     "lint": "bunx eslint ."
   },
   "dependencies": {
+    "@tanstack/solid-query": "^5.17.15",
     "solid-js": "^1.8.11"
   },
   "devDependencies": {
