@@ -16,30 +16,39 @@ const App: Component = () => {
   }))
 
   return (
-    <Switch>
-      <Match when={query.isLoading}>
-        <LocationSkeleton />
-        <CurrentWeatherSkeleton />
-        <div class='flex gap-2'>
-          <For each={WEEK_DAYS}>
-            {(weekDay) => <ForecastDaySkeleton weekDay={weekDay} />}
-          </For>
-        </div>
-      </Match>
+    <>
+      <input
+        type='checkbox'
+        value='dark'
+        class='theme-controller toggle'
+        checked={query.data?.current.is_day === 0}
+        hidden
+      />
+      <Switch>
+        <Match when={query.isLoading}>
+          <LocationSkeleton />
+          <CurrentWeatherSkeleton />
+          <div class='flex gap-2'>
+            <For each={WEEK_DAYS}>
+              {(weekDay) => <ForecastDaySkeleton weekDay={weekDay} />}
+            </For>
+          </div>
+        </Match>
 
-      <Match when={query.isSuccess}>
-        <Location
-          name={query.data?.location.name}
-          country={query.data?.location.country}
-        />
-        <CurrentWeather {...query.data?.current} />
-        <div class='flex gap-2'>
-          <For each={query.data?.forecast.forecastday}>
-            {(forcastday) => <ForecastDay {...forcastday} />}
-          </For>
-        </div>
-      </Match>
-    </Switch>
+        <Match when={query.isSuccess}>
+          <Location
+            name={query.data?.location.name}
+            country={query.data?.location.country}
+          />
+          <CurrentWeather {...query.data?.current} />
+          <div class='flex gap-2'>
+            <For each={query.data?.forecast.forecastday}>
+              {(forcastday) => <ForecastDay {...forcastday} />}
+            </For>
+          </div>
+        </Match>
+      </Switch>
+    </>
   )
 }
 
