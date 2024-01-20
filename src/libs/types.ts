@@ -3,9 +3,9 @@ import { type WEEK_DAYS } from './constants'
 export type WeekDay = (typeof WEEK_DAYS)[number]
 
 export interface Location {
-  name: string | undefined
+  name?: string
   region: string
-  country: string | undefined
+  country?: string
   lat: number
   lon: number
   tz_id: string
@@ -14,16 +14,15 @@ export interface Location {
 }
 
 export interface CurrentWeather {
-  temp_c: number
-  is_day: 0 | 1
-  condition: {
+  temp_c?: number
+  is_day?: 0 | 1
+  condition?: {
     text: string
     icon: string
-    code: number
   }
-  wind_mph: number
-  pressure_mb: number
-  precip_mm: number
+  wind_mph?: number
+  pressure_mb?: number
+  precip_mm?: number
 }
 
 interface ForecastHour {
@@ -32,7 +31,7 @@ interface ForecastHour {
   diff_rad: 0
 }
 
-interface ForecastDay {
+export interface ForecastDay {
   date: Date
   date_epoch: number
   day: {
@@ -46,8 +45,8 @@ interface ForecastDay {
   hour: Record<number, ForecastHour>
 }
 
-interface ForecastWeather {
-  forecastday: Record<number, ForecastDay>
+export interface ForecastWeather {
+  forecastday: ForecastDay[]
 }
 
 export interface Weather {

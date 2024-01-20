@@ -1,6 +1,6 @@
 import { type Component } from 'solid-js'
 
-const StaticSkeleton: Component = () => {
+const CurrentWeatherSkeleton: Component = () => {
   return (
     <div class='flex w-full items-center justify-between'>
       <div class='flex flex-col items-center capitalize'>
@@ -27,4 +27,4 @@ const StaticSkeleton: Component = () => {
   )
 }
 
-export default StaticSkeleton
+export default CurrentWeatherSkeleton
