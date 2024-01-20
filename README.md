@@ -1,29 +1,34 @@
-# Vite + Solid.js + DaisyUI + TS
+# Project: Weather App
 
-This is my personal template and it includes:
+![An image of Weather App](https://i.ibb.co/VDVbHgN/thuyencode-github-io-2024-01-20-22-35-58.png)
 
-- [Vite](https://vitejs.dev)
-- [Tailwind CSS](https://tailwindcss.com)
-- [DaisyUI](https://daisyui.com)
-- [Solid.js](https://solidjs.com)
-- Many ESLint rules
+[More detail information here](https://www.theodinproject.com/lessons/node-path-javascript-weather-app).
 
-## Get started
+## Getting started
 
-Installation:
+First, install all the dependencies:
 
 ```bash
-npm i
-
-# If you prefer Bun
-bun i
+npm install
+# or if you're using Bun
+bun install
 ```
 
-Run dev server:
+To run the dev server:
 
 ```bash
 npm run dev
-
-# If you prefer Bun
+# or if you're using Bun
 bun dev
+```
+
+To export and preview the production build:
+
+```bash
+npm run build
+npm run preview
+
+# or if you're using Bun
+bun run build
+bun preview
 ```
