@@ -1,18 +1,13 @@
 import { createQuery } from '@tanstack/solid-query'
-import { For, Match, Switch, lazy, type Component } from 'solid-js'
+import { For, Match, Switch, type Component } from 'solid-js'
+import CurrentWeather from './components/cards/CurrentWeather'
+import ForecastDay from './components/cards/ForecastDay'
+import Location from './components/cards/Location'
 import CurrentWeatherSkeleton from './components/skeletons/CurrentWeatherSkeleton'
 import ForecastDaySkeleton from './components/skeletons/ForecastDaySkeleton'
 import LocationSkeleton from './components/skeletons/LocationSkeletion'
 import { WEEK_DAYS } from './libs/constants'
 import { fetchWeather } from './libs/utils'
-
-const Location = lazy(async () => await import('./components/cards/Location'))
-const CurrentWeather = lazy(
-  async () => await import('./components/cards/CurrentWeather')
-)
-const ForecastDay = lazy(
-  async () => await import('./components/cards/ForecastDay')
-)
 
 const App: Component = () => {
   const query = createQuery(() => ({
